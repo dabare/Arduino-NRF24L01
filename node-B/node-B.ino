@@ -3,7 +3,7 @@
 #include <SPI.h>
 #include "RF24.h"
 
-/* Hardware configuration: Set up nRF24L01 radio on SPI bus plus pins 7 & 8 */
+/* Hardware configuration: Set up nRF24L01 radio on SPI bus plus pins 9 & 10 */
 RF24 radio(9, 10);
 /**********************************************************/
 
@@ -46,7 +46,7 @@ void loop() {
     radio.startListening();                                       // Now, resume listening so we catch the next packets.
     
     Serial.print(F("Got message '"));
-    Serial.print(msg_to_A);
+    Serial.print(msg_from_A);
     Serial.print(F("', Sent response '"));
     Serial.print(msg_to_A);
     Serial.println(F("'"));
